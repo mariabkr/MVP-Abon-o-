@@ -1,141 +1,119 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Abonéo Campus — MVP</title><style>
 :root{--green:#126a50;--dark:#123c32;--mint:#eaf6f0;--bg:#f5f8f6;--ink:#172c27;--muted:#667b72;--line:#dce8e1}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.side{width:252px;background:var(--dark);color:white;padding:26px 18px;flex-shrink:0}.brand{font-size:26px;font-weight:850;letter-spacing:-1px;margin:4px 10px 5px}.brand small{font-size:12px;color:#a9d7c5;letter-spacing:1.5px}.subbrand{margin:0 10px 32px;color:#b4d3c8;font-size:12px}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#d6ebe1;text-align:left;padding:13px 14px;border-radius:12px;font-weight:650}.nav button.active,.nav button:hover{background:#2a6553;color:white}.sidefoot{margin-top:35px;font-size:12px;color:#b6d6ca;line-height:1.6;padding:12px}.main{flex:1;min-width:0;padding:35px clamp(20px,4vw,65px)}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:24px;flex-wrap:wrap}h1{font-size:30px;letter-spacing:-.8px;margin:0 0 6px}h2{font-size:21px;letter-spacing:-.4px;margin:0 0 14px}h3{margin:0 0 8px;font-size:17px}p{line-height:1.55}.muted{color:var(--muted)}.eyebrow{font-size:12px;color:var(--green);font-weight:800;letter-spacing:1px;text-transform:uppercase}.btn{border:0;background:var(--green);color:white;border-radius:10px;padding:11px 16px;font-weight:750}.btn:hover{filter:brightness(.93)}.btn.outline{background:white;color:var(--green);border:1px solid #b8d8c7}.btn.ghost{background:#e8f3ec;color:var(--green)}.btn:disabled{opacity:.5;cursor:not-allowed}.banner{background:#e5f3eb;border:1px solid #c5e2d1;padding:15px 19px;border-radius:13px;font-size:13px;line-height:1.6;margin-bottom:23px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:25px}.stat,.card{background:white;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 3px 12px #0e392008}.stat strong{font-size:32px;display:block;margin:9px 0}.stat span{font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.offer{display:flex;flex-direction:column;gap:12px}.logo{width:55px;height:55px;border-radius:14px;display:grid;place-items:center;color:white;font-weight:900;font-size:25px}.netflix{background:#171717;color:#ed3434}.spotify{background:#111;color:#36d47c}.prime{background:#123f60;color:#54d0ff}.generic{background:#476c8b}.pill{font-size:11px;padding:5px 9px;border-radius:20px;background:#e8f5ec;color:#28714d;font-weight:800}.offerhead{display:flex;align-items:center;justify-content:space-between;gap:8px}.offerprice{font-size:24px;font-weight:850}.price-note{font-size:12px;color:var(--muted)}.bar{height:9px;background:#e7eee9;border-radius:10px;overflow:hidden}.bar>i{display:block;height:100%;background:#23a676;border-radius:10px}.card p{font-size:14px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-size:13px;font-weight:750}.field input,.field select,.field textarea{width:100%;border:1px solid #cadbd1;border-radius:9px;padding:11px;background:white;color:var(--ink)}.field textarea{min-height:82px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.view{display:none}.view.active{display:block}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:12px 10px;border-bottom:1px solid #e6eee8;font-size:13px;vertical-align:top}th{color:#64796e;font-size:12px}small{color:var(--muted)}.empty{padding:32px;text-align:center;color:var(--muted)}.modal{position:fixed;inset:0;background:#0a251ac4;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.show{display:flex}.dialog{background:white;width:min(510px,100%);border-radius:18px;padding:25px;max-height:90vh;overflow:auto}.dialoghead{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#edf4ef;border-radius:9px;padding:7px 11px}.toast{position:fixed;bottom:20px;right:20px;background:#163e32;color:white;padding:13px 18px;border-radius:10px;display:none;z-index:30}.tag{background:#f1f5f2;border-radius:8px;padding:8px 10px;font-size:12px}.hypo{border-left:4px solid var(--green)}.list{display:grid;gap:10px}.groupitem{padding:15px;border:1px solid var(--line);border-radius:12px;background:#fff}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}.helper{font-size:12px;color:var(--muted)}.danger{color:#a34135}.footer{margin-top:35px;color:#7c8d83;font-size:12px}.mono{font-family:ui-monospace,monospace;overflow-wrap:anywhere}@media(max-width:1100px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.app{display:block}.side{width:100%;padding:13px}.brand{font-size:22px}.subbrand,.sidefoot{display:none}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:10px}.main{padding:22px 15px}.stats,.grid,.two{grid-template-columns:1fr}.top h1{font-size:25px}}
-</style></head><body><div class="app"><aside class="side"><div class="brand">Abonéo <small>CAMPUS</small></div><div class="subbrand">Ensemble pour négocier.<br/>Chacun son abonnement.</div><nav class="nav" id="nav"><button class="active" data-view="offers">▣   Offres streaming</button><button data-view="groups">♧   Groupes d'achat</button></nav><div class="sidefoot">Offres de démonstration. Aucun partenariat ou tarif préférentiel confirmé.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Plateforme universitaire • Démonstration</div><h1 id="pageTitle">Offres streaming</h1><div class="muted" id="pageSub">Découvre les offres simulées et rejoins un groupe d’achat.</div></div></div>
-<section class="view active" id="offers"><div class="sectionhead"><div><h2>Offres à tester</h2><div class="muted">Choisis une offre fictive, puis crée ou rejoins un groupe d'intérêt.</div></div><button class="btn outline" onclick="showModal('create')">+ Créer un groupe</button></div><div class="grid" id="offerGrid"></div></section>
-<section class="view" id="groups"><div class="sectionhead"><div><h2>Groupes d'achat</h2><p class="muted">Les groupes expriment une intention d'achat, sans souscription réelle.</p></div><button class="btn" onclick="showModal('create')">+ Créer un groupe</button></div><div class="grid" id="groupGrid"></div></section>
+</style></head><body><div class="app"><aside class="side"><div class="brand">Abonéo <small>CAMPUS</small></div><div class="subbrand">Ensemble pour négocier.<br/>Chacun son abonnement.</div><nav class="nav" id="nav"><button class="active" data-view="offers">▣   Offres streaming</button><button data-view="groups">♧   Groupes d'achat</button></nav><div class="sidefoot"></div></aside><main class="main"><div class="top"><div><div class="eyebrow">Plateforme universitaire </div><h1 id="pageTitle">Offres streaming</h1><div class="muted" id="pageSub">Découvre les offres simulées et rejoins un groupe d’achat.</div></div></div>
+<section class="view active" id="offers"><div class="sectionhead"><div><h2>Offres à tester</h2><div class="muted">Choisis ton service de streaming et rejoins le groupe d’achat proposé par Abonéo.</div></div><button class="btn outline" onclick="showModal('choose')">Rejoindre un groupe</button></div><div class="grid" id="offerGrid"></div></section>
+<section class="view" id="groups"><div class="sectionhead"><div><h2>Groupes d'achat Abonéo</h2><p class="muted">Choisis un groupe existant et rejoins les étudiants intéressés. Aucun achat réel.</p></div><button class="btn" onclick="showModal('choose')">Rejoindre un groupe</button></div><div class="grid" id="groupGrid"></div></section>
 
 
 
 <div class="footer">Abonéo Campus · Prototype académique · Aucune vente ni réduction garantie.</div></main></div>
-<div class="modal" id="modal"><div class="dialog"><div class="dialoghead"><h2 id="modalTitle">Créer un groupe</h2><button class="close" onclick="closeModal()">✕</button></div><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
-<script>const KEY='aboneo-campus-mvp-v1';
-const OFFERS=[
-  {id:'netflix',name:'Netflix',cls:'netflix',logo:'N',public:14.99,example:11.99,target:500},
-  {id:'spotify',name:'Spotify',cls:'spotify',logo:'♫',public:11.99,example:8.99,target:800},
-  {id:'prime',name:'Prime Video',cls:'prime',logo:'▶',public:6.99,example:4.99,target:350}
+<div class="modal" id="modal"><div class="dialog"><div class="dialoghead"><h2 id="modalTitle">Rejoindre un groupe</h2><button class="close" onclick="closeModal()">✕</button></div><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
+<script>
+// Les groupes sont créés exclusivement par Abonéo, et non par les visiteurs.
+// Démonstration sans serveur : les inscriptions sont locales à chaque navigateur.
+const KEY = 'aboneo-campus-groupes-predefinis-v1';
+const OFFERS = [
+  {id:'netflix', name:'Netflix', cls:'netflix', logo:'N', public:14.99, example:11.99, target:500},
+  {id:'spotify', name:'Spotify', cls:'spotify', logo:'♫', public:11.99, example:8.99, target:800},
+  {id:'prime', name:'Prime Video', cls:'prime', logo:'▶', public:6.99, example:4.99, target:350}
 ];
-let state={groups:[]};
+let state = {memberships:{}};
 try {
-  const previous=JSON.parse(localStorage.getItem(KEY));
-  if(previous && typeof previous==='object') state={...previous,groups:Array.isArray(previous.groups)?previous.groups:[]};
-} catch(e) { /* Pas de données antérieures exploitables. */ }
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const eur=n=>Number(n).toLocaleString('fr-BE',{style:'currency',currency:'EUR'});
-const uid=()=>Math.random().toString(36).slice(2,10);
-function toast(message){const t=$('toast');t.textContent=message;t.style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display='none',3200)}
-function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
-const titles={
-  offers:['Offres streaming','Découvre les offres simulées et rejoins un groupe d’achat.'],
-  groups:["Groupes d’achat",'Crée un groupe, invite des étudiants et gère les participants.']
+  const stored = JSON.parse(localStorage.getItem(KEY));
+  if(stored && typeof stored === 'object' && stored.memberships && typeof stored.memberships === 'object') {
+    state = { memberships:stored.memberships };
+  }
+} catch (_) {}
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const eur = n => Number(n).toLocaleString('fr-BE', {style:'currency', currency:'EUR'});
+const members = id => Array.isArray(state.memberships[id]) ? state.memberships[id].filter(x => typeof x === 'string') : [];
+function toast(message) {
+  const t=$('toast');t.textContent=message;t.style.display='block';
+  clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display='none',3200);
+}
+function save() { try {localStorage.setItem(KEY,JSON.stringify(state));} catch (_) {toast('Sauvegarde locale indisponible');} render(); }
+const titles = {
+  offers:['Offres streaming','Découvre les tarifs simulés et rejoins le groupe d’achat de ton choix.'],
+  groups:["Groupes d’achat",'Les groupes sont proposés par Abonéo ; les étudiants peuvent uniquement les rejoindre.']
 };
-function go(view){
+function go(view) {
   if(!titles[view]) view='offers';
-  document.querySelectorAll('.view').forEach(e=>e.classList.toggle('active',e.id===view));
-  document.querySelectorAll('#nav button').forEach(e=>e.classList.toggle('active',e.dataset.view===view));
-  $('pageTitle').textContent=titles[view][0];
-  $('pageSub').textContent=titles[view][1];
+  document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id===view));
+  document.querySelectorAll('#nav button').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
+  $('pageTitle').textContent=titles[view][0];$('pageSub').textContent=titles[view][1];
   window.scrollTo({top:0,behavior:'smooth'});
 }
-document.querySelectorAll('#nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
-function render(){
+document.querySelectorAll('#nav button').forEach(el=>el.addEventListener('click',()=>go(el.dataset.view)));
+function render() {
   $('offerGrid').innerHTML=OFFERS.map(o=>`<article class="card offer">
-    <div class="offerhead"><div class="logo ${o.cls}">${o.logo}</div><span class="pill">Scénario fictif</span></div>
+    <div class="offerhead"><div class="logo ${o.cls}">${o.logo}</div><span class="pill">Offre simulée</span></div>
     <h2>${o.name}</h2>
     <div><div class="price-note">Prix public illustratif : <s>${eur(o.public)}</s> / mois</div>
     <div class="offerprice">${eur(o.example)} <small>/ mois</small></div>
-    <div class="price-note">Réduction simulée : ${Math.round((1-o.example/o.public)*100)} % </div></div>
-    <p class="muted">Objectif de groupe : ${o.target} étudiants. Chaque étudiant aurait son propre abonnement individuel.</p>
+    <div class="price-note">Réduction simulée : ${Math.round((1-o.example/o.public)*100)} % · non négociée</div></div>
+    <p class="muted">Rejoins le groupe d'achat ${o.name} proposé par Abonéo. Chaque étudiant conserverait un abonnement individuel.</p>
+    <button class="btn" onclick="showModal('join','${o.id}')">Rejoindre le groupe</button>
   </article>`).join('');
-  $('groupGrid').innerHTML=state.groups.length ? state.groups.map(g=>{
-    const o=OFFERS.find(x=>x.id===g.offer)||OFFERS[0], count=Array.isArray(g.members)?g.members.length:0;
-    const target=Math.max(2,Number(g.target)||5),percent=Math.min(100,Math.round(count/target*100));
+  $('groupGrid').innerHTML=OFFERS.map(o=>{
+    const count=members(o.id).length;
+    const percent=Math.min(100,Math.round(100*count/o.target));
     return `<article class="card offer">
-      <div class="offerhead"><div class="logo ${o.cls}">${o.logo}</div><span class="pill">Intérêt uniquement</span></div>
-      <h3>${esc(g.name)}</h3><div class="muted">${esc(o.name)} · ${count}/${target} participants</div>
-      <div class="bar"><i style="width:${percent}%"></i></div><div class="helper">${percent}% de l'objectif · Aucun achat effectué</div>
-      <div class="actions"><button class="btn" onclick="showModal('join','${g.id}')" ${count>=target?'disabled':''}>Rejoindre</button>
-      <button class="btn outline" onclick="showModal('detail','${g.id}')">Gérer / partager</button></div>
+      <div class="offerhead"><div class="logo ${o.cls}">${o.logo}</div><span class="pill">Groupe Abonéo</span></div>
+      <h3>Groupe ${o.name}</h3>
+      <div class="muted">${count} / ${o.target} inscriptions sur ce navigateur</div>
+      <div class="bar"><i style="width:${percent}%"></i></div>
+      <div class="helper">Objectif : ${o.target} étudiants · Intérêt sans paiement</div>
+      <div class="actions"><button class="btn" onclick="showModal('join','${o.id}')" ${count>=o.target?'disabled':''}>${count>=o.target?'Groupe complet':'Rejoindre le groupe'}</button>
+      <button class="btn outline" onclick="copyInvite('${o.id}')">Partager le lien</button></div>
     </article>`;
-  }).join('') : '<div class="card empty">Aucun groupe pour le moment. Crée le premier groupe d’achat.</div>';
+  }).join('');
 }
-function showModal(mode,id){
-  const modal=$('modal'),content=$('modalContent'),o=OFFERS.find(x=>x.id===id)||OFFERS[0],g=state.groups.find(x=>x.id===id);
-  modal.classList.add('show');
-  if(mode==='create'){
-    $('modalTitle').textContent='Créer un groupe d’achat';
-    content.innerHTML=`<form id="groupForm">
-      <div class="field"><label>Nom du groupe</label><input name="name" required maxlength="80" placeholder="Ex. Groupe Spotify UNamur"></div>
-      <div class="field"><label>Service de streaming</label><select name="offer">${OFFERS.map(x=>`<option value="${x.id}" ${x.id===o.id?'selected':''}>${x.name}</option>`).join('')}</select></div>
-      <div class="field"><label>Nombre de participants souhaité</label><input name="target" type="number" min="2" max="1000" value="5" required></div>
-      <div class="field"><label>Pseudonyme du créateur</label><input name="member" required maxlength="60" placeholder="Ex. ETU-01"></div>
-      <p class="helper">Créer un groupe ne garantit pas de réduction. Les participations sont enregistrées localement.</p>
-      <button class="btn" type="submit">Créer le groupe</button></form>`;
-    $('groupForm').onsubmit=e=>{
-      e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')).trim(),member=String(f.get('member')).trim(),target=Number(f.get('target'));
-      if(!name||!member||!Number.isInteger(target)||target<2||target>1000)return toast('Complète les informations du groupe');
-      state.groups.push({id:uid(),name,offer:String(f.get('offer')),target,members:[member]});
-      closeModal();save();go('groups');toast('Groupe créé');
-    };
-  }else if(mode==='join'&&g){
-    const count=g.members.length;
-    $('modalTitle').textContent='Rejoindre '+g.name;
-    content.innerHTML=`<p>Tu rejoins un groupe d'intérêt, sans paiement ni engagement commercial.</p>
-      <form id="joinForm"><div class="field"><label>Pseudonyme étudiant</label><input name="member" maxlength="60" required placeholder="Ex. ETU-02"></div>
-      <button class="btn" type="submit" ${count>=g.target?'disabled':''}>Confirmer mon intérêt</button></form>
-      ${count>=g.target?'<p class="helper">Ce groupe a atteint sa capacité.</p>':''}`;
+function showModal(mode,id) {
+  const content=$('modalContent');
+  const o=OFFERS.find(item=>item.id===id);
+  if(mode==='choose') {
+    $('modalTitle').textContent='Choisir un groupe';
+    content.innerHTML=`<p class="muted">Sélectionne le service que tu souhaites rejoindre.</p><div class="list">${OFFERS.map(x=>`<button class="btn outline" style="display:flex;align-items:center;justify-content:space-between;text-align:left" onclick="showModal('join','${x.id}')"><span>${x.name}</span><span>Rejoindre →</span></button>`).join('')}</div>`;
+  } else if(mode==='join' && o) {
+    const count=members(o.id).length;
+    $('modalTitle').textContent='Rejoindre le groupe '+o.name;
+    content.innerHTML=`<p>Inscris-toi au groupe d'intérêt ${o.name}. Chaque étudiant disposerait de son <b>propre abonnement</b> si une offre autorisée était négociée.</p>
+      <div class="tag">${count} / ${o.target} participants enregistrés ici · Prix simulé : ${eur(o.example)}/mois</div>
+      <form id="joinForm"><div class="field"><label for="memberInput">Ton pseudonyme étudiant</label><input id="memberInput" name="member" maxlength="60" required placeholder="Ex. ETU-01" autocomplete="off"></div>
+      <button class="btn" type="submit" ${count>=o.target?'disabled':''}>Confirmer mon intérêt</button></form>
+      ${count>=o.target?'<p class="helper">La capacité de ce groupe est atteinte.</p>':''}
+      <p class="helper">Démonstration : inscription locale, sans paiement et sans synchronisation entre appareils.</p>`;
     $('joinForm').onsubmit=e=>{
-      e.preventDefault();const m=String(new FormData(e.target).get('member')||'').trim();if(!m)return;
-      if(g.members.some(x=>x.toLowerCase()===m.toLowerCase()))return toast('Pseudonyme déjà dans ce groupe');
-      if(g.members.length>=g.target)return toast('Groupe complet');
-      g.members.push(m);closeModal();save();go('groups');toast('Participation enregistrée');
+      e.preventDefault();
+      const nickname=String(new FormData(e.target).get('member')||'').trim();
+      if(!nickname) return toast('Renseigne un pseudonyme');
+      const list=members(o.id);
+      if(list.some(m=>m.toLowerCase()===nickname.toLowerCase()))return toast('Ce pseudonyme est déjà inscrit dans ce groupe');
+      if(list.length>=o.target)return toast('Ce groupe est complet');
+      state.memberships[o.id]=[...list,nickname];
+      closeModal();save();go('groups');toast('Tu as rejoint le groupe '+o.name);
     };
-  }else if(mode==='detail'&&g){
-    $('modalTitle').textContent=g.name;
-    const offer=OFFERS.find(x=>x.id===g.offer)||OFFERS[0];
-    const url=location.protocol.startsWith('http')?location.href.split('#')[0]+'#g='+encodeURIComponent(g.id):'';
-    content.innerHTML=`<p><b>${g.members.length} / ${g.target}</b> étudiants intéressés · ${esc(offer.name)}</p>
-      <div class="field"><label>Nombre maximal de participants</label><input id="targetInput" type="number" min="${Math.max(2,g.members.length)}" max="1000" value="${g.target}"></div>
-      <button class="btn outline" onclick="updateTarget('${g.id}')">Enregistrer le nombre de places</button>
-      <h3 style="margin-top:20px">Membres du groupe</h3><div class="list">${g.members.map(m=>`<div class="tag">${esc(m)} <button class="close" style="float:right" onclick="removeMember('${g.id}','${encodeURIComponent(m)}')">Retirer</button></div>`).join('')}</div>
-      <h3 style="margin-top:20px">Invitation</h3>
-      <p class="helper">Lien de démonstration uniquement : les groupes ne sont pas synchronisés entre appareils.</p>
-      <div class="field"><input class="mono" readonly value="${esc(url||'Publie le site sur GitHub Pages pour obtenir un lien')}"></div>
-      <div class="actions"><button class="btn outline" onclick="copyInvite('${g.id}')">Copier le lien</button>
-      <button class="btn outline" onclick="showQR('${g.id}')">QR code</button>
-      <button class="btn outline danger" onclick="deleteGroup('${g.id}')">Supprimer le groupe</button></div>
-      <div id="qrArea" style="margin-top:12px"></div>`;
-  }else{closeModal();toast('Groupe introuvable')}
+    setTimeout(()=>{const input=$('memberInput');if(input)input.focus()},0);
+  } else return;
+  $('modal').classList.add('show');
 }
-function closeModal(){$('modal').classList.remove('show')}
-$('modal').addEventListener('click',e=>{if(e.target===$('modal'))closeModal()});
-function updateTarget(id){
-  const g=state.groups.find(x=>x.id===id);if(!g)return;
-  const n=Number($('targetInput').value);if(!Number.isInteger(n)||n<Math.max(2,g.members.length)||n>1000)return toast('Capacité invalide');
-  g.target=n;closeModal();save();toast('Capacité modifiée');
+function closeModal() { $('modal').classList.remove('show'); }
+$('modal').addEventListener('click',e=>{if(e.target===$('modal'))closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+function inviteUrl(id) {
+  return location.protocol.startsWith('http') ? location.href.split('#')[0]+'#g='+encodeURIComponent(id) : '';
 }
-function removeMember(id,encodedMember){
-  const g=state.groups.find(x=>x.id===id);if(!g)return;
-  g.members=g.members.filter(m=>m!==decodeURIComponent(encodedMember));save();showModal('detail',id);
-}
-function deleteGroup(id){
-  if(!confirm('Supprimer ce groupe ?'))return;
-  state.groups=state.groups.filter(x=>x.id!==id);closeModal();save();toast('Groupe supprimé');
-}
-function getInvite(id){return location.protocol.startsWith('http')?location.href.split('#')[0]+'#g='+encodeURIComponent(id):''}
-async function copyInvite(id){
-  const url=getInvite(id);if(!url)return toast('Publie le site pour obtenir un lien');
-  try{await navigator.clipboard.writeText(url);toast('Lien copié')}catch(e){toast('Sélectionne et copie le lien manuellement')}
-}
-function showQR(id){
-  const url=getInvite(id);if(!url)return toast('Publie le prototype pour utiliser un QR code');
-  $('qrArea').innerHTML='<p class="helper">Pour obtenir un QR code, utilise le lien d’invitation dans un générateur QR. Cette version ne synchronise pas les données entre appareils.</p>';
+async function copyInvite(id) {
+  const url=inviteUrl(id);
+  if(!url)return toast('Publie le prototype sur GitHub Pages pour partager son lien');
+  try { await navigator.clipboard.writeText(url);toast('Lien d’invitation copié'); }
+  catch (_) { window.prompt('Copie le lien d’invitation :',url); }
 }
 render();
-if(location.hash.startsWith('#g=')){
+if(location.hash.startsWith('#g=')) {
   const id=decodeURIComponent(location.hash.slice(3));
-  if(state.groups.some(g=>g.id===id)){go('groups');showModal('join',id)}
-  else toast('Ce groupe n’est pas disponible sur cet appareil : les groupes sont locaux');
+  if(OFFERS.some(o=>o.id===id)){go('groups');showModal('join',id);}
 }
 </script></body></html>
