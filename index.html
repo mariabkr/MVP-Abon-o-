@@ -47,7 +47,6 @@ function render(){
     <div class="offerprice">${eur(o.example)} <small>/ mois</small></div>
     <div class="price-note">Réduction simulée : ${Math.round((1-o.example/o.public)*100)} % </div></div>
     <p class="muted">Objectif de groupe : ${o.target} étudiants. Chaque étudiant aurait son propre abonnement individuel.</p>
-    <button class="btn" onclick="showModal('create','${o.id}')">Créer un groupe ${o.name}</button>
   </article>`).join('');
   $('groupGrid').innerHTML=state.groups.length ? state.groups.map(g=>{
     const o=OFFERS.find(x=>x.id===g.offer)||OFFERS[0], count=Array.isArray(g.members)?g.members.length:0;
