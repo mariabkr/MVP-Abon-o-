@@ -46,7 +46,7 @@ function render(){
     <h2>${o.name}</h2>
     <div><div class="price-note">Prix public illustratif : <s>${eur(o.public)}</s> / mois</div>
     <div class="offerprice">${eur(o.example)} <small>/ mois</small></div>
-    <div class="price-note">Réduction simulée : ${Math.round((1-o.example/o.public)*100)} % · Aucun accord fournisseur</div></div>
+    <div class="price-note">Réduction simulée : ${Math.round((1-o.example/o.public)*100)} % </div></div>
     <p class="muted">Objectif de groupe : ${o.target} étudiants. Chaque étudiant aurait son propre abonnement individuel.</p>
     <button class="btn" onclick="showModal('create','${o.id}')">Créer un groupe ${o.name}</button>
   </article>`).join('');
